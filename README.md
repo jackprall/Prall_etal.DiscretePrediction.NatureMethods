@@ -1,17 +1,19 @@
-# Coronavirus Evolution
+# Discrete Trait Prediction
 
-This repository contains data and other files for "Detecting Punctuated
-Evolution in SARS-CoV-2 over the First Year of the Pandemic".
+This repository contains the scripts for "Predicting Discrete Traits in Evolving Systems".
 
 ## Contents
 
-- surya_etal_front_virol_data_s1_sars_cov_2
-    - Dataset 1 (2020-05-26)
-        - Tree
-        - 3D scatter plot
-        - Node-density artifact test
-        - Regressions
-            - root-to-tip divergence ~ 1
-            - root-to-tip divergence ~ sampling time
-            - root-to-tip divergence ~ sampling time + node count
-            - root-to-tip divergence ~ sampling time + node count
+- Discrete_Simulation.sh
+    - This is a shell script that calls the others to perform the whole simluation.
+    - This script also runs the phylogenetic analysis through the software BayesTraits.
+    - You may run this to recreate our study as we performed it.
+- DiscreteFunctions.R
+    - This is an R script that details all sub-functions used in the next two scripts.
+- TestModels.R
+    - This is an R script that defines a function that will test two non-phylogenetic prediction methods as well produce the input files necessary to run BayesTraits
+    - The function defined in this script can be used to test other evolutionary models or phylogenetic tree types.
+- SimInstructions.R
+    - This is an R script that calls 'DiscreteFunctions' and 'TestModels' to test different prediction models over thirteen different evolutionary models.
+- CompileResults.R
+    - This is an R script that calls 'DiscreteFunctions' to compile the outputs of 'Discrete_Simulation' and 'TestModels' into Results files
