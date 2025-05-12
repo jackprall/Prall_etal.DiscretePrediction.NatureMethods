@@ -17,10 +17,6 @@ This repository contains the scripts for "Predicting Discrete Traits in Evolving
 - SimInstructions.V#.R
     - This R script calls 'DiscreteFunctions' and 'TestModels' to test different prediction models over thirteen different evolutionary models.
     - The matrices being tested are all found in this script.
-- NP.GLMM.V#.R
-    - This R script calls "DiscreteFunctions" and the data simulated by "SimInstructions" to make predictions with non-phylogenetic logistic regression
-- PH.GLMM.V#.R
-    - This R script calls "DiscreteFunctions" and the trees and data simulated by "SimInstructions" to make predictions with logistic regression that uses phylogenetic information
 - CompileResults.V#.R
     - This R script calls 'DiscreteFunctions' to compile the outputs of 'Discrete_Simulation' and 'TestModels' into Results files
  
@@ -57,7 +53,7 @@ When you return to the directory, you will find several new folders. Those folde
     - "LH"  - This denotes that the beta rate is LOW and the alpha rate is HIGH for a directional model.
     - "MH"  - This denotes that the beta rate is MEDIUM and the alpha rate is HIGH for a directional model.
 
-There will also be a Results folder where you can find the full results table for each test. It will have 39 columns of data for each trial.
+There will also be a Results folder where you can find the full results table for each test. It will have 33 columns of data for each trial.
 They are split into four categories: General information, predictive probabilities for each method, 
     accuracy rates for each method, the Log-Loss scores for each method, and finally the state frequencies for each trial.
 
@@ -69,8 +65,6 @@ They are split into four categories: General information, predictive probabiliti
 
 - "Beta_Bin_Prob" - This is the predictive probability that the state of Trait B is a 1, using the Beta Binomial method.
 - "Naive_Prob" -    This is the predictive probability that the state of Trait B is a 1, using the Naive Bayes method.
-- "NP_LR_Prob" -    This is the predictive probability that the state of Trait B is a 1, using non-phylogenetic Logistic Regression.
-- "Phy_LR_Prob" -   This is the predictive probability that the state of Trait B is a 1, using phylogenetic Logistic Regression.
 - "MS_MCMC_Prob" -  This is the predictive probability that the state of Trait B is a 1, using the Multistate model.
 - "Ind_MCMC_Prob" - This is the predictive probability that the state of Trait B is a 1, using Pagel's Independent model.
 - "Dep_MCMC_Prob" - This is the predictive probability that the state of Trait B is a 1, using Pagel's Dependent model.
@@ -80,8 +74,6 @@ They are split into four categories: General information, predictive probabiliti
 
 - "Beta_Bin_Acc" - This reports whether or not a researcher would make the correct prediction, using the Beta Binomial method.
 - "Naive_Acc" -    This reports whether or not a researcher would make the correct prediction, using the Naive Bayes method.
-- "NP_LR_Acc" -    This reports whether or not a researcher would make the correct prediction, using non-phylogenetic Logistic Regression.
-- "Phy_LR_Acc" -   This reports whether or not a researcher would make the correct prediction, using phylogenetic Logistic Regression.
 - "MS_MCMC_Acc" -  This reports whether or not a researcher would make the correct prediction, using the Multistate model.
 - "Ind_MCMC_Acc" - This reports whether or not a researcher would make the correct prediction, using Pagel's Independent model.
 - "Dep_MCMC_Acc" - This reports whether or not a researcher would make the correct prediction, using Pagel's Dependent model.
@@ -91,8 +83,6 @@ They are split into four categories: General information, predictive probabiliti
 
 - "Beta_Bin_LL" - This reports the Log-Loss score for the Beta Binomial method.
 - "Naive_LL" -    This reports the Log-Loss score for the Naive Bayes method.
-- "NP_LR_LL" -    This reports the Log-Loss score for non-phylogenetic Logistic Regression.
-- "Phy_LR_LL" -   This reports the Log-Loss score for phylogenetic Logistic Regression.
 - "MS_MCMC_LL" -  This reports the Log-Loss score for the Multistate model.
 - "Ind_MCMC_LL" - This reports the Log-Loss score for Pagel's Independent model.
 - "Dep_MCMC_LL" - This reports the Log-Loss score for the Pagel's Dependent model.
